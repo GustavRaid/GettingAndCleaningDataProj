@@ -1,5 +1,5 @@
 
-setwd("C:/Users/Adam/Documents/Coursera/data")
+# setwd("C:/Users/Adam/Documents/Coursera/data")
 
 ## Download and unzip the data
 #dlfile <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" 
@@ -123,10 +123,10 @@ deliverable_2 <- dcast(dmelt, subjects + activity_name ~variable, mean)
 dim(deliverable_2)
 
 # write the file 
-write.table(deliverable_2 , file="output.txt", row.names = FALSE)
+write.table(deliverable_2 , file="deliverable.2.txt", row.names = FALSE)
 
 #these command can be used to read the file
-#  data <- read.table("output.txt", header = TRUE)
+#  data <- read.table("deliverable.2.txt", header = TRUE)
 #  View(data)
 
 # test that everything ended up in the right place by comparing summarized
