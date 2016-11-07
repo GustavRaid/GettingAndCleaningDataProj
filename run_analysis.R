@@ -123,7 +123,11 @@ deliverable_2 <- dcast(dmelt, subjects + activity_name ~variable, mean)
 dim(deliverable_2)
 
 # write the file 
-write.csv(deliverable_2 , file="output.csv")
+write.table(deliverable_2 , file="output.txt", row.names = FALSE)
+
+#these command can be used to read the file
+#  data <- read.table("output.txt", header = TRUE)
+#  View(data)
 
 # test that everything ended up in the right place by comparing summarized
 # (mean) values of the origional data (gg) and the final deliverable_2
